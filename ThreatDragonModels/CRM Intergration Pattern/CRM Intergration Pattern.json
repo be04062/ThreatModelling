@@ -27,6 +27,7 @@
               "id": "1e547566-c38f-4142-8dbe-70c8323be35f",
               "z": 1,
               "hasOpenThreats": false,
+              "threats": [],
               "attrs": {
                 ".element-shape": {
                   "class": "element-shape hasNoOpenThreats isInScope"
@@ -138,6 +139,10 @@
                 {
                   "x": 246,
                   "y": 191
+                },
+                {
+                  "x": 285,
+                  "y": 218
                 }
               ],
               "id": "8d483a90-2d6d-4c42-bf8a-80758b3f05e3",
@@ -204,20 +209,8 @@
               },
               "vertices": [
                 {
-                  "x": 262,
-                  "y": 115
-                },
-                {
-                  "x": 338,
-                  "y": 118
-                },
-                {
-                  "x": 401,
-                  "y": 120
-                },
-                {
-                  "x": 523,
-                  "y": 128
+                  "x": 557,
+                  "y": 133
                 }
               ],
               "id": "7bbd05f6-5505-4e1e-b664-d56ffbff7639",
@@ -234,16 +227,26 @@
                 }
               ],
               "z": 8,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isEncrypted": true,
               "isPublicNetwork": true,
               "protocol": "Oauth 2.0",
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "Identity theft / Session hijacking of the the source system leading to data manipulation of all impacted consumers",
+                  "title": "Identity theft",
+                  "type": "Spoofing",
+                  "mitigation": "- Strong Authentication of the Source System to reduce Identity theft (e.g; usage of \n- Apply Owasp Top 20 to apply Session Isolation, Token misuse, ...)\n- Reduce the accessbiility towards the Solution on communication level to limit misuse of stolen credentials"
+                }
+              ],
               "attrs": {
                 ".marker-target": {
-                  "class": "marker-target hasNoOpenThreats isInScope"
+                  "class": "marker-target hasOpenThreats isInScope"
                 },
                 ".connection": {
-                  "class": "connection hasNoOpenThreats isInScope"
+                  "class": "connection hasOpenThreats isInScope"
                 }
               }
             },
@@ -254,7 +257,7 @@
                 "height": 80
               },
               "position": {
-                "x": 701,
+                "x": 665,
                 "y": 1
               },
               "angle": 0,
@@ -373,14 +376,22 @@
               "type": "tm.Boundary",
               "smooth": true,
               "source": {
-                "x": 1154,
-                "y": 726
+                "x": 361,
+                "y": 773
               },
               "target": {
                 "x": 1268,
                 "y": 108
               },
               "vertices": [
+                {
+                  "x": 579,
+                  "y": 840
+                },
+                {
+                  "x": 1056,
+                  "y": 799
+                },
                 {
                   "x": 1258,
                   "y": 583
@@ -749,32 +760,6 @@
               }
             },
             {
-              "type": "tm.Process",
-              "size": {
-                "width": 100,
-                "height": 100
-              },
-              "position": {
-                "x": 520,
-                "y": 617
-              },
-              "angle": 0,
-              "id": "c7425fcf-4100-4ebd-8d44-acf638ddf4d2",
-              "z": 26,
-              "hasOpenThreats": false,
-              "attrs": {
-                ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
-                },
-                "text": {
-                  "text": "Audit Engine"
-                },
-                ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
-                }
-              }
-            },
-            {
               "type": "tm.Store",
               "size": {
                 "width": 160,
@@ -895,8 +880,8 @@
                 "height": 100
               },
               "position": {
-                "x": 342,
-                "y": 607
+                "x": 413,
+                "y": 608
               },
               "angle": 0,
               "id": "bead7617-64ad-4091-b294-abcb08225aee",
@@ -927,6 +912,10 @@
                 {
                   "x": 278,
                   "y": 584
+                },
+                {
+                  "x": 360,
+                  "y": 615
                 }
               ],
               "id": "4ec01d67-1a32-4db4-b13f-1d9da6b031b3",
@@ -935,7 +924,7 @@
                   "position": 0.5,
                   "attrs": {
                     "text": {
-                      "text": "View",
+                      "text": "View Received events",
                       "font-weight": "400",
                       "font-size": "small"
                     }
@@ -985,6 +974,144 @@
                 },
                 ".element-text": {
                   "class": "element-text hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "d1514056-d065-4558-9434-485af21a3e9d"
+              },
+              "target": {
+                "id": "bead7617-64ad-4091-b294-abcb08225aee"
+              },
+              "vertices": [
+                {
+                  "x": 615,
+                  "y": 645
+                }
+              ],
+              "id": "aa23bd4d-6e84-48b9-aa2d-62e349d80b96",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "View Audit traces",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 33,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "bead7617-64ad-4091-b294-abcb08225aee"
+              },
+              "target": {
+                "id": "2a280efe-ad77-451c-b1f6-87b7721b2558"
+              },
+              "vertices": [
+                {
+                  "x": 484,
+                  "y": 570
+                }
+              ],
+              "id": "c3d5fc7c-f75d-4544-88f7-7a23e7037671",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Configure Rules",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 34,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Actor",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 612,
+                "y": 901
+              },
+              "angle": 0,
+              "id": "7008a958-8965-4d4d-a57c-711cb60fc87a",
+              "z": 35,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Administrator"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "7008a958-8965-4d4d-a57c-711cb60fc87a"
+              },
+              "target": {
+                "id": "bead7617-64ad-4091-b294-abcb08225aee"
+              },
+              "vertices": [],
+              "id": "3a6bd561-2266-41e5-949a-2016edeed70d",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Manage System",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 36,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
                 }
               }
             }
