@@ -21,7 +21,7 @@
               },
               "position": {
                 "x": 320,
-                "y": 241
+                "y": 240
               },
               "angle": 0,
               "id": "1e547566-c38f-4142-8dbe-70c8323be35f",
@@ -171,6 +171,13 @@
                   "severity": "Medium",
                   "type": "Tampering",
                   "title": "Introducting of fake message impacting all event consumers"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "title": "Unauthroized data access due to vulnerabilities in the infrastructure and custom code",
+                  "mitigation": "* USsafe of a Web application firewall to reduce the attack surface\n* Reduce the accessiblity further to only trusted source & consumer systems on network level. \n* Apply Secure Development practives which includes Secure Coding, Secure Testing and Vulnerabilty analysis."
                 }
               ],
               "attrs": {
