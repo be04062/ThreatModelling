@@ -26,17 +26,25 @@
               "angle": 0,
               "id": "1e547566-c38f-4142-8dbe-70c8323be35f",
               "z": 1,
-              "hasOpenThreats": false,
-              "threats": [],
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Unauthroized data access due to vulnerabilities in the infrastructure and custom code",
+                  "type": "Tampering",
+                  "mitigation": "* USsafe of a Web application firewall to reduce the attack surface\n* Reduce the accessiblity further to only trusted source & consumer systems on network level. \n* Apply Secure Development practives which includes Secure Coding, Secure Testing and Vulnerabilty analysis."
+                }
+              ],
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
+                  "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
                   "text": "Event Receiver\nService"
                 },
                 ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
+                  "class": "element-text hasOpenThreats isInScope"
                 }
               }
             },
@@ -171,13 +179,6 @@
                   "severity": "Medium",
                   "type": "Tampering",
                   "title": "Introducting of fake message impacting all event consumers"
-                },
-                {
-                  "status": "Open",
-                  "severity": "Medium",
-                  "type": "Tampering",
-                  "title": "Unauthroized data access due to vulnerabilities in the infrastructure and custom code",
-                  "mitigation": "* USsafe of a Web application firewall to reduce the attack surface\n* Reduce the accessiblity further to only trusted source & consumer systems on network level. \n* Apply Secure Development practives which includes Secure Coding, Secure Testing and Vulnerabilty analysis."
                 }
               ],
               "attrs": {
