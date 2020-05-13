@@ -450,16 +450,26 @@
               "angle": 0,
               "id": "2a280efe-ad77-451c-b1f6-87b7721b2558",
               "z": 15,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "title": "Unauthorized altering of configuration rules leaking to malicious consumers",
+                  "description": "The unauthorized altering of the rules defining which event data is distributed to which consumer can lead to a continous data leakage of sensitive data.    \n\nThreat can be caused by insider threat or by the misuse of the administrator web application.",
+                  "mitigation": "* All configuration settings (with high impact) should require an explicit validation.\n* Least privilige should be applied to administrators - ideally the implementation of high risk setting require validation by an alternate administrator."
+                }
+              ],
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
+                  "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
                   "text": "Subscriber Rules"
                 },
                 ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
+                  "class": "element-text hasOpenThreats isInScope"
                 }
               }
             },
