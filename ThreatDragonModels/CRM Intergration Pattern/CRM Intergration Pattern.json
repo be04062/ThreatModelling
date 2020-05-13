@@ -87,16 +87,26 @@
               "angle": 0,
               "id": "5e2d6fa2-a5d1-425a-8e4e-4ac0d732abea",
               "z": 3,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "title": "Information leakage of sensitive Events in storage and transit",
+                  "description": "Stored event data are exported (insider threat)\nStored event data are leaked to the cloud/service provider\nStored event data are leaked via backups",
+                  "mitigation": "* Encrypt data in transit between components and with sources & consumers\n* Encrypt data in storage inside the solution\n* Auditing of all events inside the solution changing the configuration and handling events"
+                }
+              ],
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
+                  "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
                   "text": "Event Storage"
                 },
                 ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
+                  "class": "element-text hasOpenThreats isInScope"
                 }
               }
             },
@@ -434,7 +444,7 @@
                 "height": 80
               },
               "position": {
-                "x": 491,
+                "x": 492,
                 "y": 454
               },
               "angle": 0,
