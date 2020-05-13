@@ -188,9 +188,15 @@
                   "status": "Open",
                   "severity": "Medium",
                   "type": "Tampering",
-                  "title": "Introduction of fake messages impacting the integrity in all receiving consumers",
+                  "title": "Introduction of fake messages impacting the integrity of receiving consumers",
                   "description": "By the introduction of fake messages , many receiving consumers may be impacted and take automatic action on the received message.  The message may be crafted by a priviliged insider.",
                   "mitigation": "* Source system should be accepted , verified before used\n* Only authorized event types  shall be allowed from sources for which agreement is made.   \n* The distribution rules should be analyzed from a risk point of view before implemented (f.e. affected systems, data classification handling, ...) .  \n*  Traceability of actions\n* tbd"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Use of insecure protocols",
+                  "type": "Information disclosure"
                 }
               ],
               "attrs": {
@@ -266,7 +272,7 @@
                   "status": "Open",
                   "severity": "Medium",
                   "description": "Identity theft / Session hijacking of the the source system leading to data manipulation of all impacted consumers",
-                  "title": "Identity theft",
+                  "title": "Data leakage & manipulation by misusing the identity of a source/consumer",
                   "type": "Spoofing",
                   "mitigation": "- Strong Authentication of the Source System to reduce Identity theft (e.g; usage of \n- Apply Owasp Top 20 to apply Session Isolation, Token misuse, ...)\n- Reduce the accessbiility towards the Solution on communication level to limit misuse of stolen credentials"
                 }
