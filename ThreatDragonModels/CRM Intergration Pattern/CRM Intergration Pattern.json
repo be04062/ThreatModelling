@@ -156,8 +156,21 @@
                   "status": "Open",
                   "severity": "Medium",
                   "type": "Information disclosure",
-                  "description": "•Unintended Data leakage and compliance infringments by leaking source data to consumers outscope outside the socpe of the original sharing agreement.",
-                  "title": "Unintended Data leakage and compliance infringments by leaking source data to consumers outscope outside the socpe of the original sharing agreement."
+                  "description": "Unintended Data leakage and compliance infringments by leaking source data to consumers outscope outside the socpe of the original sharing agreement.",
+                  "title": "Unauthorized data leakage and Compliance infringments outside the scope of the data sharing agreement",
+                  "mitigation": "- AGree on data sharing agreements \n- Classify data on entry and apply rules handling the data in relation to its classifcation.\n- Enable to abiltiy to restrict data (attribute) distribution in function of source constraints (f.e. Private data cannot leave the EUà"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "title": "Exchange of fake events crashing the system"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "title": "Introducting of fake message impacting all event consumers"
                 }
               ],
               "attrs": {
