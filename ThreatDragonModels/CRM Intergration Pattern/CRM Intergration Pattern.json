@@ -836,19 +836,29 @@
               "angle": 0,
               "id": "d1514056-d065-4558-9434-485af21a3e9d",
               "z": 27,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": true,
               "isSigned": true,
               "isEncrypted": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "title": "Limited traceability",
+                  "description": "Absense of traceability of actions present in the solution leading to inbability to investigate ( & troubleshoot) the handling of events and perform forensic analysis.",
+                  "mitigation": "* Ensure all events to data events are audited and logged\n* Ensure all configuration changes are logged\n* Ensure all system & access events are logged\n* Ensure logs are readonly and tamper protected\n* Ensure logs can be transmitted to an external solution"
+                }
+              ],
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
+                  "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
                   "text": "Log EVents"
                 },
                 ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
+                  "class": "element-text hasOpenThreats isInScope"
                 }
               }
             },
