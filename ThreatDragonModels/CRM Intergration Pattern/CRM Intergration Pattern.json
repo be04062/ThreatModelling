@@ -127,8 +127,8 @@
                   "y": 190
                 },
                 {
-                  "x": 165,
-                  "y": 215
+                  "x": 142,
+                  "y": 240
                 }
               ],
               "id": "25f638ee-e9b6-4290-b196-72d9160d7c63",
@@ -188,7 +188,7 @@
                   "status": "Open",
                   "severity": "Medium",
                   "type": "Tampering",
-                  "title": "Introduction of fake messages impacting the integrity of receiving consumers",
+                  "title": "Introduction of fake messages impacting the integrity of receiving consumers (Targettted - Insider Threat))",
                   "description": "By the introduction of fake messages , many receiving consumers may be impacted and take automatic action on the received message.  The message may be crafted by a priviliged insider.",
                   "mitigation": "* Source system should be accepted , verified before used\n* Only authorized event types  shall be allowed from sources for which agreement is made.   \n* The distribution rules should be analyzed from a risk point of view before implemented (f.e. affected systems, data classification handling, ...) .  \n*  Traceability of actions\n* tbd"
                 },
@@ -452,7 +452,7 @@
                 "height": 80
               },
               "position": {
-                "x": 492,
+                "x": 493,
                 "y": 454
               },
               "angle": 0,
@@ -1219,40 +1219,6 @@
                 },
                 ".connection": {
                   "class": "connection hasOpenThreats isInScope"
-                }
-              }
-            },
-            {
-              "type": "tm.Flow",
-              "smooth": true,
-              "source": {
-                "id": "2a280efe-ad77-451c-b1f6-87b7721b2558"
-              },
-              "target": {
-                "id": "5e2d6fa2-a5d1-425a-8e4e-4ac0d732abea"
-              },
-              "vertices": [],
-              "id": "645babe1-f6ff-4014-ba8c-f36d4c17f250",
-              "labels": [
-                {
-                  "position": 0.5,
-                  "attrs": {
-                    "text": {
-                      "text": "flow 32",
-                      "font-weight": "400",
-                      "font-size": "small"
-                    }
-                  }
-                }
-              ],
-              "z": 37,
-              "hasOpenThreats": false,
-              "attrs": {
-                ".marker-target": {
-                  "class": "marker-target hasNoOpenThreats isInScope"
-                },
-                ".connection": {
-                  "class": "connection hasNoOpenThreats isInScope"
                 }
               }
             }
