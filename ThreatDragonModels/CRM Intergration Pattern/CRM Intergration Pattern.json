@@ -81,8 +81,8 @@
                 "height": 80
               },
               "position": {
-                "x": 141,
-                "y": 449
+                "x": 142,
+                "y": 447
               },
               "angle": 0,
               "id": "5e2d6fa2-a5d1-425a-8e4e-4ac0d732abea",
@@ -95,7 +95,7 @@
                   "type": "Information disclosure",
                   "title": "Information leakage of sensitive Events in storage and transit",
                   "description": "Stored event data are exported (insider threat)\nStored event data are leaked to the cloud/service provider\nStored event data are leaked via backups",
-                  "mitigation": "* Encrypt data in transit between components and with sources & consumers\n* Encrypt data in storage inside the solution\n* Auditing of all events inside the solution changing the configuration and handling events"
+                  "mitigation": "* Encrypt data in transit between components and with sources & consumers\n* Encrypt data in storage inside the solution\n* Auditing of all events inside the solution changing the configuration and handling events\n* Access control"
                 }
               ],
               "attrs": {
@@ -555,6 +555,10 @@
                 {
                   "x": 548,
                   "y": 290
+                },
+                {
+                  "x": 647,
+                  "y": 326
                 }
               ],
               "id": "b298fe33-b108-4622-ba2c-2fafacbfb2e6",
@@ -773,7 +777,7 @@
                   "type": "Repudiation",
                   "title": "Inability to demonstrate the data is delivered to the consumer",
                   "description": "For transaction data, sensitive and  high impact data events, it may be required to demonstrate that the data has acutally be delivered to the target system. (ref.  Financial transactions, Exchange of trade data, ...)",
-                  "mitigation": "TBD"
+                  "mitigation": "- Signing of data on arrival  & confirmed receival\n- traceability & auditing\n\nTBD"
                 }
               ],
               "attrs": {
@@ -976,7 +980,7 @@
                   "type": "Tampering",
                   "title": "Unauthorized altering of configuration rules leaking to malicious consumers (Insider Threat)",
                   "description": "The unauthorized altering of the rules defining which event data is distributed to which consumer can lead to a continous data leakage of sensitive data.    \n\nThreat can be caused by insider threat or by the misuse of the administrator web application.",
-                  "mitigation": "* All configuration settings (with high impact) should require an explicit validation.\n* Least privilige should be applied to administrators - ideally the implementation of high risk setting require validation by an alternate administrator."
+                  "mitigation": "* All configuration settings (with high impact) should require an explicit validation.\n\n* Least privilige should be applied to administrators - ideally the implementation of high risk setting require validation by an alternate administrator."
                 }
               ],
               "attrs": {
